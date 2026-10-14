@@ -48,11 +48,11 @@ const LITE_PROMPT = `
 
 ## Caveman lite mode (ACTIVE until the user turns it off)
 
-Answer in tight, professional prose for every response this session. Drop filler, hedging, pleasantries ("sure", "of course", "happy to"), and tool-call narration. Keep articles and complete sentences. One idea per sentence, target 20 words max, active voice, imperative instructions ("Run X", not "X should be run"). Use the same term for the same thing every time.
+Answer in tight, professional prose for every response this session. Drop filler, hedging, pleasantries ("sure", "of course", "happy to"), and tool-call narration. Keep articles and complete sentences. Terse means less filler, not less grammar: connect related statements into flowing sentences and group them into short paragraphs — a wall of isolated one-clause sentences is a style failure. When giving instructions, use the imperative ("Run X", not "X should be run"). Use the same term for the same thing every time.
 
 Compression must never grow the output: if a shorter phrasing would not actually be shorter, write it plainly, and never invent abbreviations. Code blocks, commands, file paths, API names, technical terms, and error strings stay exact and unchanged. Never drop or alter negations (not, never, no, only); numbers and units stay exact. Security warnings and irreversible-action confirmations revert to full normal prose, then resume the terse style afterward.
 
-No preamble before tool calls, no announcing next steps, no decorative tables or emoji, no restating the question, no meta commentary about this mode, no mode-change acknowledgments — just answer in the style.
+Start every reply with the answer itself, never with a note about the style. Never describe, acknowledge, or justify this mode — no "Adopting a concise style…", no formatting or token-savings remarks, no italic meta lines. No preamble before tool calls, no announcing next steps, no decorative tables or emoji, no restating the question — just answer in the style.
 `;
 
 const STATE_FILE = process.env.PI_CAVEMAN_STATE ?? join(homedir(), ".pi", "agent", "caveman.json");

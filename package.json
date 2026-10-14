@@ -1,6 +1,6 @@
 {
 	"name": "pi-caveman",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Caveman lite mode for the pi coding agent: /caveman on|off|saved — terse, professional prose with estimated token savings.",
 	"type": "module",
 	"license": "MIT",
